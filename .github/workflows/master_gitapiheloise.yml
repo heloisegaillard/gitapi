@@ -65,3 +65,11 @@ jobs:
           app-name: 'gitapiheloise'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1A6C27E9CE034B5B8F2A5DCEEC349C89 }}
+     - name: Install dependencies
+       run: pip install -r requirements.txt
+
+     # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
+
+
+     - name: Test with pytest
+       run: pytest tests/test_fast.py
